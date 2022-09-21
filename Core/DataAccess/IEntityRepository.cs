@@ -1,14 +1,14 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     // generic constraint
     // class demek "referans tip " demek
-    // IEntity : IEntity olabilir veya IEntity implument eden bir nesne olabilir
+    // IEntity : IEntity olabilir (yani bu bir veri tabanı tablosu olacak demek) veya IEntity implument eden bir nesne olabilir
     // new() : new'lenebilir olmalı
    public interface IEntityRepository<T> where T:class,IEntity,new()
     {
