@@ -31,7 +31,7 @@ namespace Core.Aspects.Caching
                 invocation.ReturnValue = _cacheManager.Get(key);
                 return;
             }
-            invocation.Proceed();
+            invocation.Proceed(); //veritabanina giderse bu cailir
             _cacheManager.Add(key, invocation.ReturnValue, _duration);
         }
     }
